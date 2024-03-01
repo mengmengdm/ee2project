@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String url = "https://studev.groept.be/api/a23ib2c03/test"; // 替换为你要获取内容的URL
         String content = Geturl.getContent(url);
-
+        //testchange
     }
 }
