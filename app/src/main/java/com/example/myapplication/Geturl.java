@@ -10,7 +10,7 @@ import okhttp3.Response;
 
 public class Geturl {
 
-    public static Response getContent(final String url) {
+    public static Response getRespone(final String url) {
         // 在新线程中执行网络请求
         final Response[] response = {null};
         new Thread(new Runnable() {
@@ -41,4 +41,26 @@ public class Geturl {
 
         return response[0];
     }
+    public static String getContent(String url)
+    {
+        Response response = getRespone(url);
+        if (response != null && response.isSuccessful()) {
+            try {
+                String responseBody = response.body().string();
+
+                Log.d("HTTP_RESPONSE", responseBody);
+                return responseBody;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            // 处理请求失败的情况
+            Log.e("HTTP_ERROR", "Unexpected code " + response);
+
+        }
+
+        return null;
+    }
+
+
 }
