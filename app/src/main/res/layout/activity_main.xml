@@ -6,25 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <Button
+        android:id="@+id/button_go_to_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Information"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <Button
+        android:id="@+id/button_go_to_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History Data"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Smart Bar"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
 
-    <TextView
-        android:layout_width="300px"
-        android:layout_height="300px"
-        android:background="@drawable/baseline_calendar_month_24"
-        android:backgroundTint="@color/pink"
+
+
+
+    <ImageView
+        android:id="@+id/Calendar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="236dp"
+        android:src="@drawable/calnedar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/Mugs"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="352dp"
+        android:src="@drawable/clinkingbeermugs_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
