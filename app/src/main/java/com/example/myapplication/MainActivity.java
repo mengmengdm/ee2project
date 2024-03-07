@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // 创建Intent以启动新的Activity
                 // intent = new Intent(MainActivity.this, activity_current_information.class);
-                startActivity(intent);
+                //startActivity(intent);
             }
         });
 
