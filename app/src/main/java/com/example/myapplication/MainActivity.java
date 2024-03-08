@@ -23,19 +23,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String url = "https://studev.groept.be/api/a23ib2c03/test"; // 替换为你要获取内容的URL
-        String content = Geturl.getContent(url);
-        //testchange
 
-        Button button = findViewById(R.id.button_go_to_current);
+        Button mybutton1 = findViewById(R.id.button_go_to_current);
+        Button mybutton2 = findViewById(R.id.button_go_to_history);
 
         // 为按钮设置点击监听器
-        button.setOnClickListener(new View.OnClickListener() {
+        mybutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 创建Intent以启动新的Activity
-                // intent = new Intent(MainActivity.this, activity_current_information.class);
-                //startActivity(intent);
+                 //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), activity_current_information.class);
+                startActivity(intent);
+            }
+        });
+
+        mybutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), choose_week.class);
+                startActivity(intent);
             }
         });
 
