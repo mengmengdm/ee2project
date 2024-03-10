@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import java.io.IOException;
+import java.lang.reflect.GenericArrayType;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button mybutton1 = findViewById(R.id.button_go_to_current);
         Button mybutton2 = findViewById(R.id.button_go_to_history);
-
         // 为按钮设置点击监听器
         mybutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,4 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+
 }

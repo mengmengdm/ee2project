@@ -21,7 +21,6 @@ public class Geturl {
                 Request request = new Request.Builder()
                         .url(url)
                         .build();
-
                 try {
                     response[0] = client.newCall(request).execute();
                 } catch (IOException e) {
@@ -38,7 +37,6 @@ public class Geturl {
                 e.printStackTrace();
             }
         }
-
         return response[0];
     }
     public static String getContent(String url)
@@ -56,11 +54,7 @@ public class Geturl {
         } else {
             // 处理请求失败的情况
             Log.e("HTTP_ERROR", "Unexpected code " + response);
-
         }
-
         return null;
     }
-
-
 }
