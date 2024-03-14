@@ -19,7 +19,11 @@ public class choose_week extends AppCompatActivity {
         setContentView(R.layout.activity_choose_week);
 
         Button myButton1 = findViewById(R.id.button_back_main);
-
+        Button myButton2 = findViewById(R.id.button_go_to_monday);
+        Button myButton3 = findViewById(R.id.button_go_to_tuesday);
+        Button myButton4 = findViewById(R.id.button_go_to_wednsday);
+        Button myButton5 = findViewById(R.id.button_go_to_thursday);
+        Button myButton6 = findViewById(R.id.button_go_to_friday);
         // 为按钮设置点击监听器
         myButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,5 +33,54 @@ public class choose_week extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        myButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Monday");
+            }
+        });
+
+        myButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Tuesday");
+            }
+        });
+        myButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Wednesday");
+            }
+        });
+        myButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Thursday");
+            }
+        });
+        myButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Friday");
+            }
+        });
+    }
+
+    public void openSecondActivity(String buttonKey)
+    {
+        Intent intent = new Intent(this, Display_Monday.class);
+        intent.putExtra("BUTTON_KEY", buttonKey);
+        startActivity(intent);
     }
 }

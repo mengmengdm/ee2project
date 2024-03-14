@@ -37,10 +37,20 @@ public class activity_current_information extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         Button mybutton1 = findViewById(R.id.button_main);
-        TextView textView = findViewById(R.id.value_temperature);
         Data[] dataArray = Geturl.getContent("https://studev.groept.be/api/a23ib2c03/get_latest_sensordata");
-        textView.setText(dataArray[0].getHumidity());
+        TextView humidity_value = findViewById(R.id.temperature_value);
+        humidity_value.setText(dataArray[0].getTemperature());
+        TextView people_value = findViewById(R.id.humidity_value);
+        humidity_value.setText(dataArray[0].getHumidity());
 
+        mybutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
