@@ -7,9 +7,8 @@ import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
+import com.google.gson.Gson;
 public class Geturl {
-
     public static Response getRespone(final String url) {
         // 在新线程中执行网络请求
         final Response[] response = {null};
@@ -39,15 +38,17 @@ public class Geturl {
         }
         return response[0];
     }
-    public static String getContent(String url)
+    public static Data[] getContent(String url)
     {
         Response response = getRespone(url);
         if (response != null && response.isSuccessful()) {
             try {
                 String responseBody = response.body().string();
-
+                Gson gson = new Gson();
+                Data[] dataArray = gson.fromJson(responseBody, Data[].class);
                 Log.d("HTTP_RESPONSE", responseBody);
-                return responseBody;
+                Log.d("TAG",dataArray[0].getDate() );
+                return dataArray;
             } catch (IOException e) {
                 e.printStackTrace();
             }
