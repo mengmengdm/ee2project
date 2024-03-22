@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button mybutton1 = findViewById(R.id.button_go_to_current);
         Button mybutton2 = findViewById(R.id.button_go_to_history);
-        // 为按钮设置点击监听器
+        // listening on button1
         mybutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 //创建Intent以启动新的Activity
+                 //show new activity
                 Intent intent = new Intent(getApplicationContext(), activity_current_information.class);
                 startActivity(intent);
             }
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mybutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
+                //show new activity
                 Intent intent = new Intent(getApplicationContext(), choose_week.class);
                 startActivity(intent);
             }
