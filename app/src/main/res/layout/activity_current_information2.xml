@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.6"/>
 
     <ImageView
-        android:id="@+id/sound"
+        android:id="@+id/noise"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/sound"
@@ -79,16 +79,40 @@
         app:layout_constraintVertical_bias="0.1"/>
 
     <TextView
+        android:id="@+id/temperaturetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Temperature"
         android:textSize="20dp"
         app:layout_constraintTop_toTopOf="@id/temperature"
         app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
         app:layout_constraintBottom_toBottomOf="@id/temperature"
         app:layout_constraintVertical_bias="0.1" />
 
+    <TextView
+        android:id="@+id/humiditytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@id/humidity"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        app:layout_constraintBottom_toBottomOf="@id/humidity"
+        app:layout_constraintVertical_bias="0.1"/>
 
+    <TextView
+        android:id="@+id/noisetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound Level"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@id/noise"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintBottom_toBottomOf="@id/noise"
+        app:layout_constraintVertical_bias="0.1"/>
 
     <TextView
         android:id="@+id/people_value"
@@ -96,100 +120,45 @@
         android:layout_height="wrap_content"
         android:text="20"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintTop_toBottomOf="@id/nrOfPeople"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/temperature_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" 0 "
+        android:text="0"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/noise_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintTop_toBottomOf="@id/temperaturetext"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/humidity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="30"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
-
-
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@id/humiditytext"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        android:layout_marginTop="5dp" />
 
     <TextView
+        android:id="@+id/noise_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Humidity:"
+        android:text="noisy"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintTop_toBottomOf="@id/noisetext"
+        app:layout_constraintStart_toStartOf="@id/nrOfPeople"
+        app:layout_constraintEnd_toEndOf="@id/nrOfPeople"
+        android:layout_marginTop="5dp" />
 
 
-
-
-
-
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Humidity:"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Noise: :"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
 
     <Button
         android:id="@+id/button_main"
