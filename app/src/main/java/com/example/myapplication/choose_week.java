@@ -79,8 +79,10 @@ public class choose_week extends AppCompatActivity {
 
     public void openSecondActivity(String buttonKey)
     {
-        Intent intent = new Intent(this, Display_Monday.class);
-        intent.putExtra("BUTTON_KEY", buttonKey);
-        startActivity(intent);
+        Intent intent1 = new Intent(this, Display_Monday.class);
+        intent1.putExtra("BUTTON_KEY", buttonKey);
+        Intent intent2 = new Intent(this, DisplayData_Monday.class);
+        intent2.putExtra("BUTTON_KEY", buttonKey);
+        startActivity(intent1);
     }
 }

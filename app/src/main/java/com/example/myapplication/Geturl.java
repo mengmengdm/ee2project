@@ -8,6 +8,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import com.google.gson.Gson;
+
 public class Geturl {
     public static Response getRespone(final String url) {
         // 在新线程中执行网络请求
