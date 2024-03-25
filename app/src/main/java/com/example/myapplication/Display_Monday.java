@@ -37,7 +37,11 @@ public class Display_Monday extends AppCompatActivity {
             textView.setText("Thursday");
         }else if ("Friday".equals(buttonKey)) {
             textView.setText("Friday");
-        }
+        }else if ("Saturday".equals(buttonKey)) {
+            textView.setText("Saturday");
+        }else if ("Sunday".equals(buttonKey)) {
+                textView.setText("Sunday");
+    }
 
         Button mybutton1 = findViewById(R.id.button_back_main);
         Button mybutton2 = findViewById(R.id.button_back_choose_week);

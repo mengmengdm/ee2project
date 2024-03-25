@@ -24,6 +24,8 @@ public class choose_week extends AppCompatActivity {
         Button myButton4 = findViewById(R.id.button_go_to_wednsday);
         Button myButton5 = findViewById(R.id.button_go_to_thursday);
         Button myButton6 = findViewById(R.id.button_go_to_friday);
+        Button myButton7 = findViewById(R.id.button_go_to_saturday);
+        Button myButton8 = findViewById(R.id.button_go_to_sunday);
         // 为按钮设置点击监听器
         myButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +75,24 @@ public class choose_week extends AppCompatActivity {
                 //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Friday");
+            }
+        });
+
+        myButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Saturday");
+            }
+        });
+
+        myButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //创建Intent以启动新的Activity
+                Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
+                openSecondActivity("Sunday");
             }
         });
     }

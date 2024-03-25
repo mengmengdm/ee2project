@@ -50,8 +50,8 @@ public class activity_current_information extends AppCompatActivity {
             public void run() {
                 // get new data from database
                 Data[] dataArray = Geturl.getContent("https://studev.groept.be/api/a23ib2c03/get_latest");
-                temperature_value.setText(dataArray[0].getTemperature());
-                humidity_value.setText(dataArray[0].getHumidity());
+                temperature_value.setText(dataArray[0].getTemperature()+"°C");
+                humidity_value.setText(dataArray[0].getHumidity()+"%");
                 people_value.setText(dataArray[0].getPeople());
                 noise_value.setText(dataArray[0].getSound());
                 // delay 5s and refresh again
