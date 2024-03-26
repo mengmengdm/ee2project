@@ -62,9 +62,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mybutton5.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Geturl.getRespone("https://studev.groept.be/api/a23ib2c03/update_fan/0");
+                //show new activity
+                Intent intent = new Intent(getApplicationContext(), ChooseLedFunc.class);
+                startActivity(intent);
             }
         });
     }
