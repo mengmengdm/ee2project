@@ -14,9 +14,18 @@ public class ChooseLedFunc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_led_func);
 
-    Button Mode1 = findViewById(R.id.Mode1);
-    Button Mode2  = findViewById(R.id.Mode2);
-    Button Mode3 = findViewById(R.id.Mode3);
+
+        Button Mode0 = findViewById(R.id.Mode0);
+        Button Mode1 = findViewById(R.id.Mode1);
+        Button Mode2  = findViewById(R.id.Mode2);
+        Button Mode3 = findViewById(R.id.Mode3);
+
+    Mode0.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Geturl.getRespone("https://studev.groept.be/api/a23ib2c03/update_led/0");
+        }
+    });
 
     Mode1.setOnClickListener(new View.OnClickListener() {
         @Override
