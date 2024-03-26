@@ -45,11 +45,9 @@ public class Display_Monday extends AppCompatActivity {
 
         Button mybutton1 = findViewById(R.id.button_back_main);
         Button mybutton2 = findViewById(R.id.button_back_choose_week);
-        // 为按钮设置点击监听器
         mybutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
@@ -58,7 +56,6 @@ public class Display_Monday extends AppCompatActivity {
         mybutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), choose_week.class);
                 startActivity(intent);
             }

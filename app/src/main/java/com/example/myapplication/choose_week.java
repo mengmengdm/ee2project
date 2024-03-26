@@ -30,7 +30,6 @@ public class choose_week extends AppCompatActivity {
         myButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
@@ -39,7 +38,6 @@ public class choose_week extends AppCompatActivity {
         myButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Monday");
             }
@@ -48,7 +46,6 @@ public class choose_week extends AppCompatActivity {
         myButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Tuesday");
             }
@@ -56,7 +53,6 @@ public class choose_week extends AppCompatActivity {
         myButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Wednesday");
             }
@@ -64,7 +60,6 @@ public class choose_week extends AppCompatActivity {
         myButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Thursday");
             }
@@ -72,7 +67,6 @@ public class choose_week extends AppCompatActivity {
         myButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //创建Intent以启动新的Activity
                 Intent intent = new Intent(getApplicationContext(), Display_Monday.class);
                 openSecondActivity("Friday");
             }
