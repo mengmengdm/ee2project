@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 
 public class Geturl {
     public static Response getRespone(final String url) {
-        // 在新线程中执行网络请求
+        // get http in a new thread
         final Response[] response = {null};
         new Thread(new Runnable() {
             @Override
@@ -29,10 +29,10 @@ public class Geturl {
             }
         }).start();
 
-        // 等待响应完成
+        // wait for the previous works are done
         while (response[0] == null) {
             try {
-                Thread.sleep(100); // 等待100毫秒
+                Thread.sleep(100); // wait
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -54,7 +54,7 @@ public class Geturl {
                 e.printStackTrace();
             }
         } else {
-            // 处理请求失败的情况
+            // http request failed
             Log.e("HTTP_ERROR", "Unexpected code " + response);
         }
         return null;

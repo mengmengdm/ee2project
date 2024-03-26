@@ -36,6 +36,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.3"/>
 
+    <Button
+        android:id="@+id/fanon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fan ON"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/button_go_to_history"
+        app:layout_constraintTop_toBottomOf="@+id/button_go_to_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <Button
+        android:id="@+id/fanoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fan OFF"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/fanon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/button_go_to_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <Button
+        android:id="@+id/switchled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch LED"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/fanon"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toTopOf="@+id/led"
+        app:layout_constraintBottom_toBottomOf="@id/led"
+        app:layout_constraintVertical_bias="0.3"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,6 +112,28 @@
         app:layout_constraintEnd_toStartOf="@id/button_go_to_history"
         app:layout_constraintHorizontal_bias="0.8"
          />
+
+    <ImageView
+        android:id="@+id/fan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/fan"
+        app:layout_constraintStart_toStartOf="@+id/Calendar"
+        app:layout_constraintTop_toBottomOf="@id/Calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:tint="@color/blue"
+        />
+    <ImageView
+        android:id="@+id/led"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/led"
+        app:layout_constraintStart_toStartOf="@+id/Calendar"
+        app:layout_constraintTop_toBottomOf="@id/fan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".5"
+        />
 
 
 

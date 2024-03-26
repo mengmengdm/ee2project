@@ -55,7 +55,7 @@ public class activity_current_information extends AppCompatActivity {
                 people_value.setText(dataArray[0].getPeople());
                 noise_value.setText(dataArray[0].getSound());
                 // delay 5s and refresh again
-                mHandler.postDelayed(this, 5000);
+                mHandler.postDelayed(this, 2000);
             }
         };
         mHandler.post(mRunnable);

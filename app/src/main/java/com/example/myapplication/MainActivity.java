@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button mybutton1 = findViewById(R.id.button_go_to_current);
         Button mybutton2 = findViewById(R.id.button_go_to_history);
+        Button mybutton3 = findViewById(R.id.fanon);
+        Button mybutton4 = findViewById(R.id.fanoff);
+        Button mybutton5 = findViewById(R.id.switchled);
         // listening on button1
         mybutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,25 @@ public class MainActivity extends AppCompatActivity {
                 //show new activity
                 Intent intent = new Intent(getApplicationContext(), choose_week.class);
                 startActivity(intent);
+            }
+        });
+
+        mybutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Geturl.getRespone("https://studev.groept.be/api/a23ib2c03/update_fan/1");
+            }
+        });
+        mybutton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Geturl.getRespone("https://studev.groept.be/api/a23ib2c03/update_fan/0");
+            }
+        });
+        mybutton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Geturl.getRespone("https://studev.groept.be/api/a23ib2c03/update_fan/0");
             }
         });
     }
